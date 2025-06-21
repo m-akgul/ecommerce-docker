@@ -1,0 +1,17 @@
+services:
+  sqlserver:
+    image: mertakgul/ecommerce-sql:latest
+    container_name: sqlserver
+    ports:
+      - "1433:1433"
+
+  webapi:
+    image: mertakgul/ecommerceapi:latest
+    container_name: ecommerceapi
+    ports:
+      - "5126:5126"
+    depends_on:
+      - sqlserver
+
+networks:
+  appnet:

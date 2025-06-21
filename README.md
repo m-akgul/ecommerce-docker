@@ -1,33 +1,64 @@
 # 🛍️ ECommerce API + SQL (Ready-to-Run via Docker)
 
-This project runs a full-featured ASP.NET Core 9 Web API + SQL Server instance using Docker. It includes pre-seeded data and requires no setup.
+This project provides a fully working **.NET 9 Web API** for e-commerce, along with a pre-seeded **SQL Server database**, both packaged in Docker.
+
+It is 100% plug-and-play — **no code is required.**
 
 ---
 
-## 🚀 How to Run
+## Required Software
 
-### 🪟 Windows
-
-1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
-2. Double-click `start.bat`
-
-### 🍎 macOS
-
-1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
-2. Right-click `start.command` > Open With Terminal
-3. Wait until containers are running
+- [Docker Desktop](https://www.docker.com/products/docker-desktop)
 
 ---
 
-## 🌐 App URLs
+## How to Run
+
+### Windows
+
+1. Install Docker Desktop and make sure it's running
+2. Download or clone this repository
+3. Double-click the file: `start.bat`
+
+### macOS
+
+1. Install Docker Desktop and make sure it's running
+2. Download or clone this repository
+3. Right-click `start.command` → "Open With Terminal"
+
+---
+
+## App URLs
 
 - Swagger UI: [http://localhost:5126](http://localhost:5126)
 - SQL Server Port: `localhost:1433` (username `sa`, password `my_Password123`)
 
 ---
 
-## 🐳 What’s Inside
+## Docker Images (Prebuilt on Docker Hub)
 
-- `docker-compose.yml`: defines the full stack
+These will be downloaded automatically when you run the app:
+
+- API: [`mertakgul/ecommerceapi`](https://hub.docker.com/r/mertakgul/ecommerceapi)
+- DB:  [`mertakgul/ecommerce-sql`](https://hub.docker.com/r/mertakgul/ecommerce-sql)
+
+You can also pull manually:
+
+```bash
+docker pull mertakgul/ecommerceapi:latest
+docker pull mertakgul/ecommerce-sql:latest
+```
+
+---
+
+## What’s Inside
+
 - `ecommerceapi`: ASP.NET Core 9 Web API (prebuilt on Docker Hub)
 - `ecommerce-sql`: SQL Server with preloaded database (`ECommerceDb`)
+
+```yaml
+docker-compose.yml     # Orchestrates both containers
+start.bat              # Double-click launcher for Windows
+start.command          # Double-click launcher for macOS/Linux
+README.md              # You're reading it!
+```

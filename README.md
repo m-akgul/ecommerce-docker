@@ -53,7 +53,7 @@ docker pull mertakgul/ecommerce-sql:latest
 
 ## What’s Inside
 
-- `ecommerceapi`: ASP.NET Core 9 Web API (prebuilt on Docker Hub)
+- `ecommerceapi`: ASP.NET Core 9 Web API (prebuilt on Docker Hub)(CORS configured (localhost:5173))
 - `ecommerce-sql`: SQL Server with preloaded database (`ECommerceDb`)
 
 ```yaml
